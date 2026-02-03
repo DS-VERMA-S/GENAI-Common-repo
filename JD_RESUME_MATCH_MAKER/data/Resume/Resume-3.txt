@@ -1,0 +1,46 @@
+NAME: Rohit Gupta
+EMAIL: rohit.gupta@email.com
+PHONE: +91-9988776655
+LINKEDIN: linkedin.com/in/rohitguptaAI
+GITHUB: github.com/rohitgupta
+
+EXECUTIVE SUMMARY
+Senior Data Scientist with 8+ years driving ML-powered solutions and analytics strategy in fintech and healthcare. Expert in end-to-end ML lifecycle, big data processing, experimentation, and cross-functional leadership.
+
+EXPERIENCE
+Lead Data Scientist
+FinSecure Analytics, Mumbai, MH
+Jan 2021 – Present
+• Architected risk-scoring models using Gradient Boosting and Neural Nets; reduced default rate by 24%.
+• Built automated ML pipelines with Airflow, Kubeflow.
+• Collaborated with product leadership to define KPIs, metrics dashboards.
+
+Data Scientist
+HealthTech Innovations, Pune, MH
+Jun 2017 – Dec 2020
+• Designed predictive modeling solutions for patient readmission.
+• Partnered with engineering to deploy microservices on AWS.
+• Implemented CI/CD and monitoring for models.
+
+Data Analyst
+Insight Analytics Services, Delhi
+Jul 2014 – May 2017
+• Performed data mining and ETL; automated weekly reports.
+• Built SQL scripts for large data sets; saved 15+ hours/week.
+
+EDUCATION
+M.S. in Data Science
+University of Southern California | 2016–2018
+
+B.Tech in Information Technology
+Delhi Technological University | 2010–2014
+
+CORE SKILLS
+Big Data: Spark, Hadoop
+ML: Python, R, TensorFlow, PyTorch
+Cloud: AWS, GCP
+Tools: Kubernetes, Docker, Airflow
+
+ACHIEVEMENTS
+• Speaker at PyData Mumbai 2023
+• Published research on time-series forecasting in IEEE

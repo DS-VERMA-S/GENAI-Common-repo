@@ -1,0 +1,18 @@
+TITLE: Lead Data Scientist
+LOCATION: Remote / Any
+DEPARTMENT: AI & Analytics
+ROLE
+Drive strategic analytics initiatives, own ML frameworks, lead cross-org data science teams.
+
+RESPONSIBILITIES
+• Define analytics strategy and vision.
+• Build reusable ML platforms and tools.
+• Oversee experimentation, model governance.
+• Facilitate collaboration across product, engineering, business.
+• Mentor and recruit data science talent.
+
+REQUIREMENTS
+• 8+ years experience.
+• Strong leadership and technical skills.
+• Cloud and deployment expertise.
+• Excellent communication.

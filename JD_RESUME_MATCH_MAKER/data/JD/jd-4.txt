@@ -1,0 +1,17 @@
+TITLE: NLP Data Scientist
+LOCATION: Hyderabad, Telangana, India
+DESCRIPTION
+Own NLP initiatives across products; build language models and production pipelines.
+
+RESPONSIBILITIES
+• Develop transformer-based models (classification, summarization).
+• Build semantic search and embedding pipelines.
+• Collaborate with frontend teams for Chatbot integrations.
+• Evaluate model performance and optimize pipelines.
+• Conduct error analysis and iterate models.
+
+REQUIREMENTS
+• 2–5 years experience with NLP.
+• Strong Python and PyTorch/HuggingFace expertise.
+• Experience with Elasticsearch is preferred.
+• Good data wrangling and visualization skills.

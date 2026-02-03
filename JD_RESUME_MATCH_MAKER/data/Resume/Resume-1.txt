@@ -1,0 +1,50 @@
+NAME: Aakash Verma
+EMAIL: aakash.verma@email.com
+PHONE: +91-9876543210
+LINKEDIN: linkedin.com/in/aakashverma
+GITHUB: github.com/aakashds
+
+PROFESSIONAL SUMMARY
+Recent Master of Data Science graduate with hands-on experience building predictive models, running statistical analyses, and developing machine-learning pipelines. Skilled in Python, SQL, and data visualization. Seeking a data scientist role to solve real-world problems.
+
+EDUCATION
+Master of Science in Data Science
+Indian Institute of Technology, Delhi
+Aug 2022 – May 2024
+
+Bachelor of Technology in Computer Science
+University of Delhi
+Aug 2018 – May 2022
+
+TECHNICAL SKILLS
+Languages: Python (pandas, numpy, scikit-learn), SQL, R
+Tools: Jupyter, VS Code, Git
+Cloud: AWS (S3, Lambda basics)
+Visualization: matplotlib, seaborn, Tableau
+ML: regression, classification, clustering
+
+PROJECTS
+House Price Prediction
+• Built regression models (Linear Regression, Random Forest) to predict housing prices.
+• Performed feature engineering and hyperparameter tuning; achieved R2 score of 0.82.
+• Visualized model results with seaborn.
+
+Customer Churn Analysis
+• Analyzed telecom dataset and built a classifier (Logistic Regression) to predict churn.
+• Reduced false negatives using class weighting.
+• Created an interactive dashboard in Tableau.
+
+WORK EXPERIENCE
+Data Science Intern — Tech Analytics Pvt Ltd
+Jun 2023 – Aug 2023
+• Cleaned and structured sales and customer data from multiple sources.
+• Created dashboards and reports to track KPIs.
+• Assisted senior data scientists with feature selection and model evaluation.
+
+CERTIFICATIONS
+• IBM Data Science Professional Certificate
+• SQL for Data Science – Coursera
+
+EXTRA CURRICULAR
+• Volunteer: DataKind Hackathon 2023
+• Member: Analytics Club, IIT Delhi

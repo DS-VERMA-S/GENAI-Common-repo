@@ -1,0 +1,19 @@
+TITLE: Data Scientist
+LOCATION: Bangalore, Karnataka, India
+REPORTS TO: Head of Analytics
+ROLE OVERVIEW
+Work with cross-functional teams to derive insights from data, build predictive models, and deliver dashboards. This role suits early career professionals passionate about data.
+
+RESPONSIBILITIES
+• Analyze structured and unstructured data to uncover trends.
+• Build and validate regression and classification models.
+• Communicate findings to business stakeholders.
+• Develop dashboards in Tableau/Power BI.
+• Support data collection and ETL processes.
+
+REQUIREMENTS
+• B.Tech / MSc / MS in CS, Statistics, Mathematics or related.
+• 1–3 years experience in data analysis or modeling.
+• Strong SQL and Python skills.
+• Familiarity with ML fundamentals.
+• Good communication skills.

@@ -1,0 +1,17 @@
+TITLE: Senior Data Scientist
+LOCATION: Mumbai, Maharashtra, India
+TEAM: Risk and Modeling
+DESCRIPTION
+Lead analytics and modeling for risk products; work with business to translate requirements into ML solutions.
+
+RESPONSIBILITIES
+• Architect and maintain credit risk models.
+• Build explainable ML and monitoring frameworks.
+• Mentor junior scientists and set standards.
+• Partner with engineering for scalable deployment.
+
+REQUIREMENTS
+• 6+ years experience.
+• Expertise in Python, SQL, ML frameworks.
+• Big Data experience (Spark) preferred.
+• Strong ownership and documentation skills.

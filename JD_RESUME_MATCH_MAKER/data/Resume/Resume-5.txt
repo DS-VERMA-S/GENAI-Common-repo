@@ -1,0 +1,37 @@
+NAME: Anil Menon
+EMAIL: anil.menon@email.com
+PHONE: +91-9876501234
+LINKEDIN: linkedin.com/in/anilmenonDS
+PORTFOLIO: anilmenon.com
+
+PROFILE
+Seasoned Staff Data Scientist with 12+ years leading analytics strategy, ML adoption, and data-driven transformation. Expertise in governance, high-impact product launches, and mentoring large teams.
+
+PROFESSIONAL EXPERIENCE
+Staff Data Scientist
+Global Retail Corp, Singapore
+Mar 2019 – Present
+• Defined and executed global analytics roadmap.
+• Built cross-functional data science guild spanning 40+ data professionals.
+• Launched dynamic pricing engine yielding 18% revenue lift.
+
+Principal Data Scientist
+AdTech Solutions, London, UK
+Aug 2014 – Feb 2019
+• Directed ML research team for bidding optimization using deep learning.
+• Integrated real-time scoring with streaming platforms.
+
+Senior Data Scientist
+Tech Metrics Inc., Bangalore
+Jul 2011 – Jul 2014
+• Designed multivariate testing framework; improved experimentation velocity.
+
+EDUCATION
+Ph.D. in Machine Learning
+University of Cambridge | 2007–2011
+
+SKILLS
+Leadership, Strategic Roadmaps
+ML: Deep Learning, Causal Inference
+Tools: Spark, Airflow, MLflow
+Cloud: Azure, AWS

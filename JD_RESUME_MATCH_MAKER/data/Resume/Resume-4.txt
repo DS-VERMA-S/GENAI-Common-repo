@@ -1,0 +1,36 @@
+NAME: Sneha Iyer
+EMAIL: sneha.iyer@email.com
+PHONE: +91-9123456799
+LINKEDIN: linkedin.com/in/snehaIyerNLP
+GITHUB: github.com/snehaNLP
+
+SUMMARY
+Data Scientist specializing in Natural Language Processing with 3+ years experience building NLP pipelines, transformers, and RAG systems. Strong skills in Python, PyTorch, and HuggingFace.
+
+EXPERIENCE
+NLP Data Scientist
+TextTech Labs, Hyderabad, TG
+Feb 2022 – Present
+• Built transformer-based classification models; improved accuracy by 15%.
+• Deployed semantic search using embeddings and Elasticsearch.
+• Created end-to-end RAG system for customer support chatbot.
+
+Data Scientist
+Analytica Solutions, Bangalore, KA
+Jul 2020 – Jan 2022
+• Built topic modeling pipelines (LDA) for customer feedback.
+• Automated NER for entity extraction from legal documents.
+
+EDUCATION
+M.Tech in Computer Science (AI)
+IIIT Hyderabad | 2018–2020
+
+B.Tech in IT
+Visvesvaraya Technological University | 2014–2018
+
+SKILLS
+NLP: Transformers, BERT, GPT
+Python: PyTorch, HuggingFace, spaCy
+Search: Elasticsearch
+Deployment: Docker, FastAPI
+Data Prep: pandas, numpy

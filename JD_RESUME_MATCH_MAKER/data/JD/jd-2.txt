@@ -1,0 +1,19 @@
+TITLE: Data Scientist II
+LOCATION: Gurgaon, Haryana, India
+TEAM: Product Analytics
+DESCRIPTION
+You will build scalable models and work with product and engineering to integrate data science capabilities into products.
+
+RESPONSIBILITIES
+• Lead modeling efforts for recommendation engines.
+• Build feature stores and reusable pipelines.
+• Perform A/B testing and causal analysis.
+• Create dashboards and automated alerts.
+• Collaborate with engineers on deployment.
+
+REQUIREMENTS
+• 3–6 years experience in data science.
+• Proficiency in SQL, Python, Docker.
+• Experience with AWS or GCP.
+• Strong statistical and experimental design skills.
+• Experience with MLflow/Kubeflow is a plus.
