@@ -21,23 +21,65 @@ class ModelService():
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
+    # def build_prompt(self, user_prompt: str) -> str:
+    #         return f"""
+    #             You are an AI assistant.
+
+    #             Rules:
+    #             - Answer the question directly.
+    #             - Do NOT restate the question.
+    #             - Do NOT ask follow-up questions.
+    #             - Do NOT include markdown.
+    #             - Provide exactly one paragraph.
+    #             - Stop after answering.
+
+    #             Question:
+    #             {user_prompt}
+
+    #             Answer:
+    #             """.strip()
+
     def build_prompt(self, user_prompt: str) -> str:
-            return f"""
-                You are an AI assistant.
+        return f"""
+            Answer the following question in a single paragraph of plain text.
 
-                Rules:
-                - Answer the question directly.
-                - Do NOT restate the question.
-                - Do NOT ask follow-up questions.
-                - Do NOT include markdown.
-                - Provide exactly one paragraph.
-                - Stop after answering.
+            Question:
+            {user_prompt}
 
-                Question:
-                {user_prompt}
+            Answer:
+            """.strip()
 
-                Answer:
-                """.strip()
+    import re
+
+    def extract_answer_only(self, text: str) -> str:
+        # Remove everything before "Answer:"
+        if "Answer:" in text:
+            text = text.split("Answer:", 1)[-1]
+
+        # Split into sentences / paragraphs
+        # Keep only the FIRST paragraph-like chunk
+        parts = re.split(r"\n\s*\n", text.strip())
+
+        answer = parts[0]
+
+        # Remove any trailing instruction-like fragments
+        answer = re.sub(
+            r"(please|answer|question|rule|markdown).*",
+            "",
+            answer,
+            flags=re.IGNORECASE
+        )
+
+        # Normalize whitespace
+        answer = re.sub(r"\s+", " ", answer).strip()
+
+        # Final hard stop if model stops mid-answer
+        answer = answer.split(".")
+        answer.pop(-1)        
+
+        return ".".join(answer) + "."
+
+
     def hard_stop(self, text: str) -> str:
         STOP_STRINGS = [
             "Question:",
@@ -90,6 +132,7 @@ class ModelService():
         return " ".join(words[:max_words])
 
 
+
     def generate(self, prompt: str, max_tokens: int, temperature: float):
 
         prompt = self.build_prompt(prompt)
@@ -116,10 +159,8 @@ class ModelService():
             skip_special_tokens=True
         )
 
-        decoded = decoded.split("Answer:", 1)[-1]  # remove prefix
-        decoded = self.hard_stop(decoded)               # stop continuation
-        decoded = self.sanitize_output(decoded)         # remove instruction echoes
-        decoded = self.enforce_word_limit(decoded, 60)
+        decoded = self.extract_answer_only(decoded)
+        # decoded = self.enforce_word_limit(decoded, 100)
         return decoded
 
     def __repr__(self):
