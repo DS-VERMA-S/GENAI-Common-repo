@@ -10,7 +10,7 @@ from app.model import ModelService
 from app.schema import GenerateRequest, GenerateResponse
 
 
-hf_model_name = "Qwen/Qwen3-0.6B"
+hf_model_name = "Qwen/Qwen3-4B-Instruct-2507"
 device = "cpu"
 
 logger = logging.getLogger("llm_inference_service")
