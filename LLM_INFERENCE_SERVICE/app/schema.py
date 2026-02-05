@@ -1,6 +1,4 @@
-from pydantic import BaseModel, Field
-
-from pydantic import field_validator
+from pydantic import BaseModel, Field, field_validator
 
 class GenerateRequest(BaseModel):
     prompt: str
@@ -14,7 +12,13 @@ class GenerateRequest(BaseModel):
             raise ValueError("prompt must not be empty")
         return v
 
+    @field_validator('temperature')
+    @classmethod
+    def temperature_seting(cls, value):
+        if value == 0:
+            return 0.0001
 
+        return value
 
 class GenerateResponse(BaseModel):
     output: str
