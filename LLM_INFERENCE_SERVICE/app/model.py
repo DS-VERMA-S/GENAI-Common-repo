@@ -30,24 +30,6 @@ class ModelService():
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
-    # def build_prompt(self, user_prompt: str) -> str:
-    #         return f"""
-    #             You are an AI assistant.
-
-    #             Rules:
-    #             - Answer the question directly.
-    #             - Do NOT restate the question.
-    #             - Do NOT ask follow-up questions.
-    #             - Do NOT include markdown.
-    #             - Provide exactly one paragraph.
-    #             - Stop after answering.
-
-    #             Question:
-    #             {user_prompt}
-
-    #             Answer:
-    #             """.strip()
-
     def build_prompt(self, user_prompt: str) -> str:
         return f"""
             Answer the following question in a single paragraph of plain text.
@@ -58,7 +40,7 @@ class ModelService():
             Answer:
             """.strip()
 
-    import re
+
 
     def extract_answer_only(self, text: str) -> str:
         # Remove everything before "Answer:"
@@ -87,60 +69,6 @@ class ModelService():
         answer.pop(-1)        
 
         return ".".join(answer) + "."
-
-
-    def hard_stop(self, text: str) -> str:
-        STOP_STRINGS = [
-            "Question:",
-            "Answer:",
-            "Rules:",
-            "If you",
-            "Now,",
-        ]
-
-        for s in STOP_STRINGS:
-            if s in text:
-                text = text.split(s, 1)[0]
-        return text.strip()
-
-    import re
-
-    def sanitize_output(self, text: str) -> str:
-        # Remove leftover instruction-like lines
-        patterns = [
-            r"If you don't know.*",
-            r"Now, answer.*",
-            r"The answer should.*",
-            r"Provide.*paragraph.*",
-            r"Rules:.*",
-        ]
-
-        for p in patterns:
-            text = re.sub(p, "", text, flags=re.IGNORECASE)
-
-        # Collapse whitespace
-        text = re.sub(r"\s+", " ", text)
-
-        return text.strip()
-
-
-    def clean_output(self, text: str) -> str:
-        # Remove anything before "Answer:"
-        if "Answer:" in text:
-            text = text.split("Answer:", 1)[-1]
-
-        # Hard stop if model tries to continue conversation
-        for stop_token in ["Question:", "User:", "###"]:
-            if stop_token in text:
-                text = text.split(stop_token, 1)[0]
-
-        return text.strip()
-
-    def enforce_word_limit(self, text: str, max_words: int) -> str:
-        words = text.strip().split()
-        return " ".join(words[:max_words])
-
-
 
     def generate(self, prompt: str, max_tokens: int, temperature: float):
 
@@ -183,7 +111,6 @@ class ModelService():
             mem_delta_mb = mem_after_mb - mem_before_mb
 
         decoded = self.extract_answer_only(decoded_raw)
-        # decoded = self.enforce_word_limit(decoded, 100)
         if psutil is not None:
             logger.info(
                 "Generation stats (prompt_tokens=%d, total_tokens=%d, new_tokens=%d, elapsed_ms=%.2f, rss_before_mb=%.2f, rss_after_mb=%.2f, rss_delta_mb=%.2f)",
