@@ -1,10 +1,15 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import logging
 import time
+import os
 import torch
 import re
 
 logger = logging.getLogger("llm_inference_service")
+try:
+    import psutil
+except Exception:  # pragma: no cover - fallback if psutil not installed
+    psutil = None
 
 class ModelService():
 
@@ -142,6 +147,10 @@ class ModelService():
         prompt = self.build_prompt(prompt)
 
         start = time.perf_counter()
+        mem_before_mb = None
+        if psutil is not None:
+            process = psutil.Process(os.getpid())
+            mem_before_mb = process.memory_info().rss / (1024 * 1024)
         inputs = self.tokenizer(
             prompt,
             return_tensors="pt",
@@ -167,16 +176,33 @@ class ModelService():
         total_tokens = output_ids[0].shape[0]
         new_tokens = max(total_tokens - prompt_tokens, 0)
         elapsed_ms = (time.perf_counter() - start) * 1000
+        mem_after_mb = None
+        mem_delta_mb = None
+        if psutil is not None:
+            mem_after_mb = process.memory_info().rss / (1024 * 1024)
+            mem_delta_mb = mem_after_mb - mem_before_mb
 
         decoded = self.extract_answer_only(decoded_raw)
         # decoded = self.enforce_word_limit(decoded, 100)
-        logger.info(
-            "Generation stats (prompt_tokens=%d, total_tokens=%d, new_tokens=%d, elapsed_ms=%.2f)",
-            prompt_tokens,
-            total_tokens,
-            new_tokens,
-            elapsed_ms,
-        )
+        if psutil is not None:
+            logger.info(
+                "Generation stats (prompt_tokens=%d, total_tokens=%d, new_tokens=%d, elapsed_ms=%.2f, rss_before_mb=%.2f, rss_after_mb=%.2f, rss_delta_mb=%.2f)",
+                prompt_tokens,
+                total_tokens,
+                new_tokens,
+                elapsed_ms,
+                mem_before_mb,
+                mem_after_mb,
+                mem_delta_mb,
+            )
+        else:
+            logger.info(
+                "Generation stats (prompt_tokens=%d, total_tokens=%d, new_tokens=%d, elapsed_ms=%.2f)",
+                prompt_tokens,
+                total_tokens,
+                new_tokens,
+                elapsed_ms,
+            )
         logger.info("Raw output: %s", decoded_raw)
         logger.info("Processed output: %s", decoded)
         return decoded
