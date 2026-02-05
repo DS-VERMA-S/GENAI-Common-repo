@@ -1,6 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
+import logging
+import time
 import torch
 import re
+
+logger = logging.getLogger("llm_inference_service")
 
 class ModelService():
 
@@ -137,11 +141,13 @@ class ModelService():
 
         prompt = self.build_prompt(prompt)
 
+        start = time.perf_counter()
         inputs = self.tokenizer(
             prompt,
             return_tensors="pt",
             truncation=True
         ).to(self.device)
+        prompt_tokens = inputs["input_ids"].shape[1]
 
         with torch.no_grad():
             output_ids = self.model.generate(
@@ -154,13 +160,25 @@ class ModelService():
                 repetition_penalty=1.1
             )
 
-        decoded = self.tokenizer.decode(
+        decoded_raw = self.tokenizer.decode(
             output_ids[0],
             skip_special_tokens=True
         )
+        total_tokens = output_ids[0].shape[0]
+        new_tokens = max(total_tokens - prompt_tokens, 0)
+        elapsed_ms = (time.perf_counter() - start) * 1000
 
-        decoded = self.extract_answer_only(decoded)
+        decoded = self.extract_answer_only(decoded_raw)
         # decoded = self.enforce_word_limit(decoded, 100)
+        logger.info(
+            "Generation stats (prompt_tokens=%d, total_tokens=%d, new_tokens=%d, elapsed_ms=%.2f)",
+            prompt_tokens,
+            total_tokens,
+            new_tokens,
+            elapsed_ms,
+        )
+        logger.info("Raw output: %s", decoded_raw)
+        logger.info("Processed output: %s", decoded)
         return decoded
 
     def __repr__(self):
