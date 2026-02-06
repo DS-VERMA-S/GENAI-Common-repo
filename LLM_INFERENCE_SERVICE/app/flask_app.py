@@ -1,6 +1,7 @@
 import logging
 import os
 import time
+from datetime import date
 
 from flask import Flask, jsonify, request
 
@@ -9,11 +10,13 @@ from app.model import ModelService
 hf_model_name = "Qwen/Qwen3-0.6B"
 device = "cpu"
 
-logger = logging.getLogger("llm_inference_service")
+logger = logging.getLogger("LLM INFERENCE SERVICE")
 if not logger.handlers:
     log_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "logs"))
     os.makedirs(log_dir, exist_ok=True)
-    log_file = os.path.join(log_dir, "llm_inference_service.log")
+    current_time = time.localtime()
+    name = time.strftime("%Y_%m_%d", current_time)
+    log_file = os.path.join(log_dir, f"llm_inference_flaskapi_service_{name}.log")
     log_format = "%(asctime)s %(levelname)s %(name)s - %(message)s"
     logging.basicConfig(
         level=logging.INFO,

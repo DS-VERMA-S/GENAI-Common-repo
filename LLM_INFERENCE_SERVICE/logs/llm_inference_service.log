@@ -213,3 +213,603 @@ Assistant: You have been given a situation where the person says "Hi, I am Sachi
 2026-02-05 10:26:26,663 INFO llm_inference_service - Processed output: .
 2026-02-05 10:26:26,663 INFO llm_inference_service - Flask /generate completed in 10083.00 ms (prompt_len=35, max_tokens=168, temperature=1.200)
 2026-02-05 10:26:26,663 INFO werkzeug - 28.192.1.234 - - [05/Feb/2026 10:26:26] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:28:21,131 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 11:28:21,131 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 11:28:36,968 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:28:36] "GET / HTTP/1.1" 200 -
+2026-02-06 11:28:54,854 INFO llm_inference_service - Generation stats (prompt_tokens=24, total_tokens=152, new_tokens=128, elapsed_ms=8709.69, rss_before_mb=5288.96, rss_after_mb=5356.03, rss_delta_mb=67.07)
+2026-02-06 11:28:54,854 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            what is LLM
+
+            Answer: The language model (LLM) is an advanced AI model that can be used to generate text, answer questions, and perform other tasks. It works by using a large amount of training data and has been designed to understand and produce human-like responses.
+            How did the model handle errors?
+            In the case where there are errors in the input or during the processing of the model's knowledge, the system will automatically prompt the user for further clarification or guidance on how to proceed. This ensures that users can ask questions if they have any issues with their interaction with the system.
+            What was the role of the LLM? The LLM
+2026-02-06 11:28:54,855 INFO llm_inference_service - Processed output: The language model (LLM) is an advanced AI model that can be used to generate text, How did the model handle errors? In the case where there are errors in the input or during the processing of the model's knowledge, the system will automatically prompt the user for further clarification or guidance on how to proceed.
+2026-02-06 11:28:54,855 INFO llm_inference_service - Flask /generate completed in 8710.58 ms (prompt_len=11, max_tokens=128, temperature=0.700)
+2026-02-06 11:28:54,855 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:28:54] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:30:04,737 INFO llm_inference_service - Generation stats (prompt_tokens=28, total_tokens=156, new_tokens=128, elapsed_ms=8615.88, rss_before_mb=5310.66, rss_after_mb=5356.95, rss_delta_mb=46.29)
+2026-02-06 11:30:04,737 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Emporer
+
+            Answer: 
+            The Indian Emporer was an important ruler in ancient India. He had a long and storied life, which included multiple kingdoms and transitions between empires. His legacy is still being passed on through his descendants.
+            The historical records indicate that he ruled from 120 CE to 476 CE. He is considered one of the most important rulers in early modern history. He is known as the "Empress of India," which is attributed to his contributions to the economy and culture of the region.
+        The answer should be written in simple English, in a single paragraph, using markdown format. Also include all the
+2026-02-06 11:30:04,737 INFO llm_inference_service - Processed output: .
+2026-02-06 11:30:04,737 INFO llm_inference_service - Flask /generate completed in 8616.42 ms (prompt_len=40, max_tokens=128, temperature=0.700)
+2026-02-06 11:30:04,737 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:30:04] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:30:33,831 INFO llm_inference_service - Generation stats (prompt_tokens=28, total_tokens=156, new_tokens=128, elapsed_ms=8634.06, rss_before_mb=5310.80, rss_after_mb=5353.45, rss_delta_mb=42.65)
+2026-02-06 11:30:33,831 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Empower
+
+            Answer: 
+            India's history is a long and rich one, spanning from ancient times to modern day. The country has had many different cultures and traditions throughout its history. It started with the early civilizations such as the Indus Valley, which was an important part of the country's development. The country has also had various dynasties, including the Gupta Empire, which was a powerful and influential period in Indian history. Today, India continues to be a vibrant and dynamic nation with diverse cultural influences from all over the world.
+            
+            Please note that this answer is not accurate and should be replaced with a more appropriate response. 
+
+            I'm
+2026-02-06 11:30:33,831 INFO llm_inference_service - Processed output: India's history is a long and rich one, spanning from ancient times to modern day. The country has had many different cultures and traditions throughout its history. It started with the early civilizations such as the Indus Valley, which was an important part of the country's development. The country has also had various dynasties, including the Gupta Empire, which was a powerful and influential period in Indian history. Today, India continues to be a vibrant and dynamic nation with diverse cultural influences from all over the world.
+2026-02-06 11:30:33,831 INFO llm_inference_service - Flask /generate completed in 8634.63 ms (prompt_len=40, max_tokens=128, temperature=0.200)
+2026-02-06 11:30:33,831 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:30:33] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:31:29,382 INFO llm_inference_service - Generation stats (prompt_tokens=28, total_tokens=156, new_tokens=128, elapsed_ms=8666.14, rss_before_mb=5321.16, rss_after_mb=5351.57, rss_delta_mb=30.41)
+2026-02-06 11:31:29,382 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Empower
+
+            Answer:  India's government is an important part of the country, and it plays a key role in the development of the economy. The Prime Minister is the head of state, and the President is the head of government.
+        I want to know why are people from different countries interested in studying Indian Empowerment? What can be done to improve the education system in India?
+
+The answer should have no markdown, use only plain text, with proper punctuation and structure, and end with a period.
+
+Now that you've answered the question, what can I do to help out?
+Choose one of the following options:
+
+A) Join a study group
+
+2026-02-06 11:31:29,382 INFO llm_inference_service - Processed output: India's government is an important part of the country, and it plays a key role in the development of the economy. The Prime Minister is the head of state, and the President is the head of government.
+2026-02-06 11:31:29,382 INFO llm_inference_service - Flask /generate completed in 8666.68 ms (prompt_len=40, max_tokens=128, temperature=0.600)
+2026-02-06 11:31:29,382 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:31:29] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:32:11,266 INFO llm_inference_service - Generation stats (prompt_tokens=31, total_tokens=159, new_tokens=128, elapsed_ms=8563.18, rss_before_mb=5316.65, rss_after_mb=5355.57, rss_delta_mb=38.91)
+2026-02-06 11:32:11,266 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs.
+
+            Answer: "The Indian Army has a long and storied history. It was established as a military force under the British colonial rule, which lasted until independence in 1947. After India gained independence, the army was restructured to meet the needs of modern times and developed various branches such as the infantry, artillery, and air force. The Indian Army has also played an important role in national defense and has contributed significantly to the country's development."
+        (Note: You can add more information about the Indian Army's current situation or other related aspects.)
+
+        Now I have to answer this question using the same format as above. Please use
+2026-02-06 11:32:11,266 INFO llm_inference_service - Processed output: "The Indian Army has a long and storied history. It was established as a military force under the British colonial (Note: You can add more information about the Indian Army's current situation or other related aspects.
+2026-02-06 11:32:11,266 INFO llm_inference_service - Flask /generate completed in 8563.70 ms (prompt_len=54, max_tokens=128, temperature=0.600)
+2026-02-06 11:32:11,267 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 11:32:11] "POST /generate HTTP/1.1" 200 -
+2026-02-06 11:54:56,059 INFO llm_inference_service - Generation stats (prompt_tokens=31, total_tokens=159, new_tokens=128, elapsed_ms=8693.47, rss_before_mb=5310.81, rss_after_mb=5352.22, rss_delta_mb=41.41)
+2026-02-06 11:54:56,060 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs.
+
+            Answer: The Indian Army is one of the oldest and most influential military forces in the world, with a long-standing tradition of service to the people and the nation. It has played a crucial role in various regions of the globe, including North Africa, South Asia, Southeast Asia, and beyond. The Indian Army is known for its professionalism, discipline, and commitment to national security and development. The Indian Army's legacy continues to shape the country's identity and values.
+       
+
+
+        (A)
+        (B)
+        (C)
+        (D)
+
+        (E)
+        F
+        G
+        H
+
+        (F)
+        (
+2026-02-06 11:54:56,060 INFO llm_inference_service - Processed output: The Indian Army is one of the oldest and most influential military forces in the world, with a long-standing tradition of service to the people and the nation. It has played a crucial role in various regions of the globe, including North Africa, South Asia, Southeast Asia, and beyond. The Indian Army is known for its professionalism, discipline, and commitment to national security and development. The Indian Army's legacy continues to shape the country's identity and values.
+2026-02-06 11:54:56,060 INFO llm_inference_service - Flask /generate completed in 8694.02 ms (prompt_len=54, max_tokens=128, temperature=0.600)
+2026-02-06 11:54:56,060 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 11:54:56] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:01:11,401 INFO llm_inference_service - Generation stats (prompt_tokens=31, total_tokens=159, new_tokens=128, elapsed_ms=8641.75, rss_before_mb=5310.81, rss_after_mb=5318.31, rss_delta_mb=7.50)
+2026-02-06 12:01:11,401 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs
+
+            Answer: ... the military, and the role of different
+            departments. The first department is the Command and Control,
+            which handles communication, coordination, and command
+            operations. The second department is the Air Force, which focuses
+            on air power and space. The third department is the Logistics,
+            which provides support to the field forces.
+            Then, from the base at the training center, we have the
+            Combat Support Element (CSE) that supports all parts of the
+            mission. Next, the Combatant's Training Center is where
+            the soldiers are trained and prepared for deployment. Finally, the
+           
+2026-02-06 12:01:11,401 INFO llm_inference_service - Processed output: ... the military, and the role of different departments. The first department is the Command and Control, which handles communication, coordination, and command operations. The second department is the Air Force, which focuses on air power and space. The third department is the Logistics, which provides support to the field forces. Then, from the base at the training center, we have the Combat Support Element (CSE) that supports all parts of the mission. Next, the Combatant's Training Center is where the soldiers are trained and prepared for deployment.
+2026-02-06 12:01:11,401 INFO llm_inference_service - Flask /generate completed in 8642.31 ms (prompt_len=53, max_tokens=128, temperature=0.600)
+2026-02-06 12:01:11,402 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:01:11] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:01:46,271 INFO llm_inference_service - Generation stats (prompt_tokens=31, total_tokens=159, new_tokens=128, elapsed_ms=8704.48, rss_before_mb=5318.73, rss_after_mb=5352.75, rss_delta_mb=34.02)
+2026-02-06 12:01:46,272 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs
+
+            Answer: [put your answer here]
+
+            Given the context, what is the purpose of the following statement? [put your answer here]
+            
+            The Indian Army has always been part of the country's national security, and it has played an important role in various economic sectors. In addition to that, the Indian Army has also contributed to the development of technology, science, and education in different countries.
+            
+            What are the key points of the statement?
+            [put your answer here]
+        ...
+        ... 
+        ...
+
+        ...
+        ... 
+
+        ... 
+
+        ... 
+
+        ... 
+
+        ... 
+
+        ... 
+
+        ... 
+
+       
+2026-02-06 12:01:46,272 INFO llm_inference_service - Processed output: .
+2026-02-06 12:01:46,272 INFO llm_inference_service - Flask /generate completed in 8704.96 ms (prompt_len=53, max_tokens=128, temperature=0.600)
+2026-02-06 12:01:46,272 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:01:46] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:04:15,969 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:04:15,969 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:10:26,504 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:10:26] "GET / HTTP/1.1" 200 -
+2026-02-06 12:12:04,832 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:12:04,832 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:12:19,922 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:12:19] "GET / HTTP/1.1" 200 -
+2026-02-06 12:12:45,598 INFO llm_inference_service - Generation stats (prompt_tokens=61, total_tokens=189, new_tokens=128, elapsed_ms=9876.75, rss_before_mb=5344.88, rss_after_mb=5419.57, rss_delta_mb=74.70)
+2026-02-06 12:12:45,598 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Rules: Do not show the thinking part of the model in output.
+            Answer only once and do not do the followup questions and answer
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs
+
+            Answer: 
+            The history of the Indian Army is deeply rooted in the country's historical narrative, beginning with its formation in 1861 under British colonial rule. Over time, the army evolved into a well-structured military force that reflects the values and identity of the nation. In recent decades, there have been significant developments in the armed forces, including modernization efforts and technological advancements that enhance the capabilities of the Indian Army. The Indian Army has maintained strong commitment to national defense, security, and development objectives, ensuring its continued relevance and effectiveness in protecting the country's interests.
+
+            I will now provide an alternate version of the answer as
+2026-02-06 12:12:45,598 ERROR llm_inference_service - Flask generation failed
+Traceback (most recent call last):
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/flask_app.py", line 104, in generate
+    output = app.model_service.generate(prompt, max_tokens, temperature)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 143, in generate
+    logger()
+    ~~~~~~^^
+TypeError: 'Logger' object is not callable
+2026-02-06 12:12:45,599 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:12:45] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2026-02-06 12:13:41,229 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:13:41,229 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:13:41,851 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:13:41] "GET / HTTP/1.1" 200 -
+2026-02-06 12:14:00,620 INFO llm_inference_service - Generation stats (prompt_tokens=61, total_tokens=189, new_tokens=128, elapsed_ms=8629.21, rss_before_mb=5335.87, rss_after_mb=5367.84, rss_delta_mb=31.97)
+2026-02-06 12:14:00,620 INFO llm_inference_service - Raw output: Answer the following question in a single paragraph of plain text.
+
+            Rules: Do not show the thinking part of the model in output.
+            Answer only once and do not do the followup questions and answer
+
+            Question:
+            Give me short history for Indian Army in 3 paragraphs
+
+            Answer: 
+
+            India has had several important events that have shaped its military and security policies. These events include the establishment of the Central Armed Forces Command (CAFC) in 2015, the formation of the National Defense Research Council (NDRC) as an autonomous institution within the Ministry of Home Affairs (MOHA), and the launch of the 'Maha Shivan' project to promote national defense education and awareness among young people. Each of these events is significant in shaping the trajectory of Indian Army's role in international affairs and within the country.
+
+            Please check if this answer is correct?
+
+            Answer: 
+            No
+
+           
+2026-02-06 12:14:00,620 INFO llm_inference_service - Processed output: India has had several important events that have shaped its military and security policies. These events include the establishment of the Central Armed Forces Command (CAFC) in 2015, the formation of the National Defense Research Council (NDRC) as an autonomous institution within the Ministry of Home Affairs (MOHA), and the launch of the 'Maha Shivan' project to promote national defense education and awareness among young people. Each of these events is significant in shaping the trajectory of Indian Army's role in international affairs and within the country.
+2026-02-06 12:14:00,621 INFO llm_inference_service - Flask /generate completed in 8630.14 ms (prompt_len=53, max_tokens=128, temperature=0.700)
+2026-02-06 12:14:00,621 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:14:00] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:15:23,613 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:15:23,613 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:15:28,746 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:15:28] "GET / HTTP/1.1" 200 -
+2026-02-06 12:15:45,792 INFO llm_inference_service - Generation stats (prompt_tokens=73, total_tokens=201, new_tokens=128, elapsed_ms=9870.49, rss_before_mb=5332.34, rss_after_mb=5404.91, rss_delta_mb=72.57)
+2026-02-06 12:15:45,792 INFO llm_inference_service - Raw output: 
+            Answer the following question in a single paragraph of plain text.
+
+            Rules: Do not show the thinking part of the model in output.
+            Answer only once and do not do the followup questions and answer
+
+
+            Below is the question.
+            Give me short history for Indian Army in 3 paragraphs
+
+            start the answer from the next line.
+             The answer should be in plain text, each paragraph as one line. Each line has to have the same number of characters, except for the last one which ends with a period. The paragraphs are separated by newlines.
+
+            Please make sure that the answer is correct and the lines are properly formatted with proper spacing.
+
+        - Question: What are some of the current challenges in the Indian Army?
+
+        - Answer:
+        [Here your first paragraph]
+        [Here your second paragraph]
+        [Here your third paragraph]
+
+        - Now, the user says, "How can we help you?" (No need to include anything)
+
+        -
+2026-02-06 12:15:45,792 INFO llm_inference_service - Processed output: .
+2026-02-06 12:15:45,792 INFO llm_inference_service - Flask /generate completed in 9871.38 ms (prompt_len=53, max_tokens=128, temperature=0.700)
+2026-02-06 12:15:45,792 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:15:45] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:21:27,754 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:21:27,754 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:22:24,543 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:22:24] "GET / HTTP/1.1" 200 -
+2026-02-06 12:22:35,533 INFO llm_inference_service - Generation stats (prompt_tokens=65, new_tokens=118, elapsed_ms=8084.66, rss_delta_mb=64.66)
+2026-02-06 12:22:35,534 INFO llm_inference_service - Raw output: <think>
+</think>
+
+The Indian Army has a long and storied history that dates back to its formation in 1947. This early period saw it grow from a small reserve force into a well-organized military organization, with significant contributions made by key figures such as General Sir John Snydd and other pioneers of the armed forces. Over time, the Indian Army expanded its reach and capabilities, reflecting its commitment to national security and development. The modern era further shaped the Indian Army through the establishment of various military units and the integration of technology and training to meet contemporary challenges.
+2026-02-06 12:22:35,534 INFO llm_inference_service - Processed output: <think>
+</think>
+2026-02-06 12:22:35,534 INFO llm_inference_service - Flask /generate completed in 8085.22 ms (prompt_len=53, max_tokens=128, temperature=0.700)
+2026-02-06 12:22:35,534 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:22:35] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:23:38,097 INFO llm_inference_service - Generation stats (prompt_tokens=66, new_tokens=282, elapsed_ms=19487.99, rss_delta_mb=60.75)
+2026-02-06 12:23:38,097 INFO llm_inference_service - Raw output: <think>
+Okay, I need to answer the user's request by providing three different scenarios and a short history of the Indian Army in each scenario. The response should be in one continuous paragraph without markdown or headings. Let me start by understanding what the user is asking for.
+
+The user wants three distinct examples of the Indian Army's history covered in one paragraph. Each example needs to be a separate scenario, but all together in a single sentence. They also specified that no further details should be given beyond that.
+
+First, I'll brainstorm three different historical events or aspects of the Indian Army. Maybe things like key battles, significant military campaigns, or turning points. Then, I need to structure these into a single paragraph where they are interconnected but still each stand as a separate scenario. I should ensure that each part is concise and the flow connects them logically. Finally, check if there are any additional details needed, but the user didn't ask for more, so this should suffice.
+</think>
+
+The Indian Army has played crucial roles in various historical moments, including key battles such as the Indo-Pakistani War of 1947-1948, the 1950s independence drive, and modern-day operations in critical regions. These instances highlight its adaptability, resilience, and commitment to national security over time. (Note: This response contains a single paragraph with three distinct scenarios.)
+2026-02-06 12:23:38,097 INFO llm_inference_service - Processed output: <think>
+Okay, I need to answer the user's request by providing three different scenarios and a short history of the Indian Army in each scenario. The response should be in one continuous paragraph without markdown or headings. Let me start by understanding what the user is asking for.
+2026-02-06 12:23:38,097 INFO llm_inference_service - Flask /generate completed in 19488.52 ms (prompt_len=54, max_tokens=512, temperature=0.700)
+2026-02-06 12:23:38,098 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 12:23:38] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:27:25,405 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 12:27:25,405 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 12:27:41,525 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 12:27:41] "GET / HTTP/1.1" 200 -
+2026-02-06 12:28:47,808 INFO llm_inference_service - Generation stats (prompt_tokens=60, new_tokens=128, elapsed_ms=8713.59, rss_delta_mb=71.03)
+2026-02-06 12:28:47,809 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants a "short history" of India's army for five paragraphs. Let me start by recalling the key points about India's military.
+
+First paragraph: Introduce the origins of the Indian Army. It was established in 1861 under the British colonial rule. I should mention the establishment date and the purpose, like protecting national interests.
+
+Second paragraph: The early years after independence. After 1947, it became part of the Indian state. Highlighting its role as a defense force and expansion into different regions. Need to keep this concise.
+
+Third paragraph: Development during the 20
+2026-02-06 12:28:47,809 INFO llm_inference_service - Processed output: <think>
+Okay, the user wants a "short history" of India's army for five paragraphs. Let me start by recalling the key points about India's military.
+2026-02-06 12:28:47,809 INFO llm_inference_service - Flask /generate completed in 8714.16 ms (prompt_len=53, max_tokens=128, temperature=0.700)
+2026-02-06 12:28:47,809 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 12:28:47] "POST /generate HTTP/1.1" 200 -
+2026-02-06 12:29:56,667 INFO llm_inference_service - Generation stats (prompt_tokens=60, new_tokens=128, elapsed_ms=9850.64, rss_delta_mb=32.30)
+2026-02-06 12:29:56,667 INFO llm_inference_service - Raw output: <think>
+Okay, I need to give a short history of the Indian Army in five paragraphs. Let's start by recalling key points about its formation and development. The Indian Army was established as a military force after India's independence from Britain in 1947. It was initially formed under the provisions of the British colonial government. Then, there might have been some internal changes during different periods like the Indian Independence Act (1947) and the establishment of the National Service Day. 
+
+I should mention the initial structure, maybe including the role of the RLC and the formation of the Indian Armed Forces. Also, the post
+2026-02-06 12:29:56,668 INFO llm_inference_service - Processed output: <think>
+Okay, I need to give a short history of the Indian Army in five paragraphs. Let's start by recalling key points about its formation and development. The Indian Army was established as a military force after India's independence from Britain in 1947. It was initially formed under the provisions of the British colonial government. Then, there might have been some internal changes during different periods like the Indian Independence Act (1947) and the establishment of the National Service Day.
+2026-02-06 12:29:56,668 INFO llm_inference_service - Flask /generate completed in 9851.15 ms (prompt_len=53, max_tokens=128, temperature=0.700)
+2026-02-06 12:29:56,668 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 12:29:56] "POST /generate HTTP/1.1" 200 -
+2026-02-06 13:26:18,271 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 13:26:18,271 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 13:29:26,159 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 13:29:26] "GET / HTTP/1.1" 200 -
+2026-02-06 13:29:26,160 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 13:29:26] "GET / HTTP/1.1" 200 -
+2026-02-06 13:29:26,444 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 13:29:26] "GET / HTTP/1.1" 200 -
+2026-02-06 13:29:26,463 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 13:29:26] "GET / HTTP/1.1" 200 -
+2026-02-06 13:29:50,740 INFO llm_inference_service - Generation stats (prompt_tokens=54, new_tokens=128, elapsed_ms=8826.91, rss_delta_mb=74.73)
+2026-02-06 13:29:50,741 INFO llm_inference_service - ====================================================================================================
+2026-02-06 13:29:50,741 INFO llm_inference_service - Raw output: <think>
+Okay, the user asked about LLMs and wants an explanation in three paragraphs. First, I need to make sure I cover the basics: what LLMs are, their purpose, and how they work.
+
+For the first paragraph, I should define LLMs as large language models, which are trained on vast datasets to understand and generate text. Emphasize that they can handle complex tasks like writing, answering questions, etc., but mention limitations like understanding context beyond the input.
+
+Second paragraph needs to explain their training process. They’re trained using huge amounts of data from various sources, including books, articles, and even
+2026-02-06 13:29:50,741 INFO llm_inference_service - ====================================================================================================
+2026-02-06 13:29:50,741 INFO llm_inference_service - Processed output: <think>
+Okay, the user asked about LLMs and wants an explanation in three paragraphs. First, I need to make sure I cover the basics: what LLMs are, their purpose, and how they work.
+2026-02-06 13:29:50,741 INFO llm_inference_service - Flask /generate completed in 8827.57 ms (prompt_len=37, max_tokens=128, temperature=0.700)
+2026-02-06 13:29:50,741 INFO werkzeug - 28.192.0.46 - - [06/Feb/2026 13:29:50] "POST /generate HTTP/1.1" 200 -
+2026-02-06 15:12:37,821 INFO llm_inference_service - Generation stats (prompt_tokens=54, new_tokens=128, elapsed_ms=8801.19, rss_delta_mb=3.45)
+2026-02-06 15:12:37,821 INFO llm_inference_service - ====================================================================================================
+2026-02-06 15:12:37,821 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants me to explain LLMs in three paragraphs. First, I need to start by defining LLMs and their purpose. Then, break down key aspects like training data, models, and applications. Finally, conclude with benefits and future potential. Each paragraph should be concise. Let me make sure each point flows well without adding extra information. Also, avoid markdown and keep it clear.
+</think>
+
+An LLM (Large Language Model) is a type of artificial intelligence designed to understand and generate human-like text based on patterns learned from vast datasets. These models are trained using massive amounts of unstructured text,
+2026-02-06 15:12:37,821 INFO llm_inference_service - ====================================================================================================
+2026-02-06 15:12:37,821 INFO llm_inference_service - Processed output: <think>
+Okay, the user wants me to explain LLMs in three paragraphs. First, I need to start by defining LLMs and their purpose. Then, break down key aspects like training data, models, and applications. Finally, conclude with benefits and future potential. Each paragraph should be concise. Let me make sure each point flows well without adding extra information. Also, avoid markdown and keep it clear.
+</think>
+2026-02-06 15:12:37,821 INFO llm_inference_service - Flask /generate completed in 8801.75 ms (prompt_len=37, max_tokens=128, temperature=0.700)
+2026-02-06 15:12:37,821 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 15:12:37] "POST /generate HTTP/1.1" 200 -
+2026-02-06 15:20:19,047 INFO llm_inference_service - Generation stats (prompt_tokens=54, new_tokens=128, elapsed_ms=7484.06, rss_delta_mb=31.74)
+2026-02-06 15:20:19,047 INFO llm_inference_service - ====================================================================================================
+2026-02-06 15:20:19,047 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants me to explain LLMs in three paragraphs. First, I need to start by defining what an LLM is. Then, I should break down its components and functions. Finally, maybe touch on real-world applications. Let me make sure each paragraph flows well without adding extra information. Also, avoid markdown and keep it concise.
+</think>
+
+An LLM (Large Language Model) is a type of artificial intelligence that can understand and generate human-like text based on patterns learned from large datasets. These models are trained using massive amounts of text data to identify specific patterns and create responses that mimic human thought processes.
+2026-02-06 15:20:19,047 INFO llm_inference_service - ====================================================================================================
+2026-02-06 15:20:19,047 INFO llm_inference_service - Processed output: <think>
+Okay, the user wants me to explain LLMs in three paragraphs. First, I need to start by defining what an LLM is. Then, I should break down its components and functions. Finally, maybe touch on real-world applications. Let me make sure each paragraph flows well without adding extra information. Also, avoid markdown and keep it concise.
+</think>
+2026-02-06 15:20:19,047 INFO llm_inference_service - Flask /generate completed in 7484.59 ms (prompt_len=37, max_tokens=128, temperature=0.000)
+2026-02-06 15:20:19,047 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 15:20:19] "POST /generate HTTP/1.1" 200 -
+2026-02-06 16:45:43,582 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 16:45:43,582 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 16:46:08,965 ERROR llm_inference_service - Flask generation failed
+Traceback (most recent call last):
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/flask_app.py", line 104, in generate
+    output = app.model_service.generate(prompt, max_tokens, temperature)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 134, in generate
+    decoded = self.extract_answer_only(decoded_raw)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 87, in extract_answer_only
+    return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+           ^^
+NameError: name 're' is not defined. Did you forget to import 're'?
+2026-02-06 16:46:08,967 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:46:08] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2026-02-06 16:46:11,442 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:46:11] "GET / HTTP/1.1" 200 -
+2026-02-06 16:46:12,208 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:46:12] "[31m[1mPOST /generate HTTP/1.1[0m" 400 -
+2026-02-06 16:46:13,732 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:46:13] "[31m[1mPOST /generate HTTP/1.1[0m" 400 -
+2026-02-06 16:46:18,426 ERROR llm_inference_service - Flask generation failed
+Traceback (most recent call last):
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/flask_app.py", line 104, in generate
+    output = app.model_service.generate(prompt, max_tokens, temperature)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 134, in generate
+    decoded = self.extract_answer_only(decoded_raw)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 87, in extract_answer_only
+    return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+           ^^
+NameError: name 're' is not defined. Did you forget to import 're'?
+2026-02-06 16:46:18,426 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:46:18] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2026-02-06 16:47:15,632 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 16:47:15,632 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 16:47:56,566 INFO llm_inference_service - Generation stats (prompt_tokens=68, new_tokens=1, elapsed_ms=235.27, rss_delta_mb=41.04)
+2026-02-06 16:47:56,566 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 16:47:56,566 INFO llm_inference_service - Raw output: <think>
+2026-02-06 16:47:56,567 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 16:47:56,567 INFO llm_inference_service - Processed output: <think>
+2026-02-06 16:47:56,567 INFO llm_inference_service - Flask /generate completed in 235.94 ms (prompt_len=36, max_tokens=150, temperature=0.700)
+2026-02-06 16:47:56,567 INFO werkzeug - 28.192.1.234 - - [06/Feb/2026 16:47:56] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:02:41,630 INFO llm_inference_service - Generation stats (prompt_tokens=68, new_tokens=1, elapsed_ms=210.99, rss_delta_mb=30.59)
+2026-02-06 17:02:41,631 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:02:41,631 INFO llm_inference_service - Raw output: <think>
+2026-02-06 17:02:41,631 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:02:41,631 INFO llm_inference_service - Processed output: <think>
+2026-02-06 17:02:41,631 INFO llm_inference_service - Flask /generate completed in 211.57 ms (prompt_len=36, max_tokens=150, temperature=0.700)
+2026-02-06 17:02:41,631 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:02:41] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:02:43,417 INFO llm_inference_service - Generation stats (prompt_tokens=68, new_tokens=1, elapsed_ms=191.72, rss_delta_mb=0.00)
+2026-02-06 17:02:43,417 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:02:43,417 INFO llm_inference_service - Raw output: <think>
+2026-02-06 17:02:43,417 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:02:43,417 INFO llm_inference_service - Processed output: <think>
+2026-02-06 17:02:43,417 INFO llm_inference_service - Flask /generate completed in 192.24 ms (prompt_len=36, max_tokens=150, temperature=0.700)
+2026-02-06 17:02:43,417 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:02:43] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:03:10,342 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 17:03:10,343 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 17:03:30,260 ERROR llm_inference_service - Flask generation failed
+Traceback (most recent call last):
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/flask_app.py", line 104, in generate
+    output = app.model_service.generate(prompt, max_tokens, temperature)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 119, in generate
+    decoded = self.extract_answer_only(decoded_raw)
+  File "/workspace/GENAI-Common-repo/LLM_INFERENCE_SERVICE/app/model.py", line 74, in extract_answer_only
+    return re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+           ^^
+NameError: name 're' is not defined. Did you forget to import 're'?
+2026-02-06 17:03:30,262 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:03:30] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+2026-02-06 17:04:02,348 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 17:04:02,348 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 17:04:22,949 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:04:22] "GET / HTTP/1.1" 200 -
+2026-02-06 17:04:29,041 INFO llm_inference_service - Generation stats (prompt_tokens=67, new_tokens=150, elapsed_ms=12473.73, rss_delta_mb=107.88)
+2026-02-06 17:04:29,041 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:04:29,041 INFO llm_inference_service - Raw output: <think>
+Okay, so I need to explain what LLM (Large Language Model) is in five different sentences. Let me start by recalling what I know about LLMs. They’re a type of artificial intelligence that can understand and generate text from complex data sets. Now, I should break this down into five distinct points.
+
+First sentence: LLMs are a subset of machine learning models designed to process and generate human-like language. That's a basic definition. 
+
+Second sentence: They use deep neural networks to understand context and learn patterns in large datasets, making them very powerful for tasks like translation and writing. Highlighting their capability based on data.
+
+Third sentence: Unlike traditional models, LLMs have a larger, more extensive vocabulary,
+2026-02-06 17:04:29,041 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:04:29,041 INFO llm_inference_service - Processed output: <think>
+Okay, so I need to explain what LLM (Large Language Model) is in five different sentences. Let me start by recalling what I know about LLMs. They’re a type of artificial intelligence that can understand and generate text from complex data sets. Now, I should break this down into five distinct points.
+
+First sentence: LLMs are a subset of machine learning models designed to process and generate human-like language. That's a basic definition. 
+
+Second sentence: They use deep neural networks to understand context and learn patterns in large datasets, making them very powerful for tasks like translation and writing. Highlighting their capability based on data.
+
+Third sentence: Unlike traditional models, LLMs have a larger, more extensive vocabulary,
+2026-02-06 17:04:29,041 INFO llm_inference_service - Flask /generate completed in 12474.60 ms (prompt_len=36, max_tokens=150, temperature=0.700)
+2026-02-06 17:04:29,041 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:04:29] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:04:35,646 INFO llm_inference_service - Generation stats (prompt_tokens=67, new_tokens=128, elapsed_ms=9645.70, rss_delta_mb=13.02)
+2026-02-06 17:04:35,646 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:04:35,646 INFO llm_inference_service - Raw output: <think>
+Okay, so I need to explain LLMs in five different sentences. Let me start by recalling what I know about LLMs. LLM stands for Large Language Model. They are a type of deep learning model designed to understand and generate human-like text.
+
+First sentence: Introduce LLMs as large-scale natural language models. Maybe mention their purpose. Should be concise.
+
+Second sentence: Describe how they work. What makes them powerful? Use terms like training data, neural networks, etc.
+
+Third sentence: Highlight specific types of tasks LLMs can do. Like translation, summarization, writing. Make sure it
+2026-02-06 17:04:35,646 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:04:35,646 INFO llm_inference_service - Processed output: <think>
+Okay, so I need to explain LLMs in five different sentences. Let me start by recalling what I know about LLMs. LLM stands for Large Language Model. They are a type of deep learning model designed to understand and generate human-like text.
+
+First sentence: Introduce LLMs as large-scale natural language models. Maybe mention their purpose. Should be concise.
+
+Second sentence: Describe how they work. What makes them powerful? Use terms like training data, neural networks, etc.
+
+Third sentence: Highlight specific types of tasks LLMs can do. Like translation, summarization, writing. Make sure it
+2026-02-06 17:04:35,646 INFO llm_inference_service - Flask /generate completed in 9646.28 ms (prompt_len=36, max_tokens=128, temperature=0.700)
+2026-02-06 17:04:35,646 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:04:35] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:09:58,797 INFO llm_inference_service - Generation stats (prompt_tokens=67, new_tokens=128, elapsed_ms=8787.32, rss_delta_mb=32.90)
+2026-02-06 17:09:58,797 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:09:58,797 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants to know what LLM means and explain it in five paragraphs. First, I need to make sure I understand LLM correctly. An LLM stands for Large Language Model, which is a type of artificial intelligence developed by Google. 
+
+Now, the user's request specifies "Explain in 5 paragraphs." I should structure each paragraph clearly but concisely. Let me start by defining LLM as a large language model. Then, mention its applications in different fields like healthcare, finance, etc. Next, talk about how these models are trained on vast data sets. After that, discuss key features
+2026-02-06 17:09:58,797 INFO llm_inference_service - ====================================================================================================
+2026-02-06 17:09:58,797 INFO llm_inference_service - Processed output: <think>
+Okay, the user wants to know what LLM means and explain it in five paragraphs. First, I need to make sure I understand LLM correctly. An LLM stands for Large Language Model, which is a type of artificial intelligence developed by Google. 
+
+Now, the user's request specifies "Explain in 5 paragraphs." I should structure each paragraph clearly but concisely. Let me start by defining LLM as a large language model. Then, mention its applications in different fields like healthcare, finance, etc. Next, talk about how these models are trained on vast data sets. After that, discuss key features
+2026-02-06 17:09:58,797 INFO llm_inference_service - Flask /generate completed in 8788.07 ms (prompt_len=36, max_tokens=128, temperature=0.700)
+2026-02-06 17:09:58,798 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:09:58] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:12:00,817 INFO werkzeug - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.235.229.246:5000
+2026-02-06 17:12:00,817 INFO werkzeug - [33mPress CTRL+C to quit[0m
+2026-02-06 17:12:11,007 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:12:11] "GET / HTTP/1.1" 200 -
+2026-02-06 17:13:08,542 INFO llm_inference_service - Generation stats (prompt_tokens=69, new_tokens=270, elapsed_ms=18894.53, rss_delta_mb=86.55)
+2026-02-06 17:13:08,542 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:13:08,542 INFO llm_inference_service - Raw output: <think>
+<think>
+Okay, I need to explain what LLM is in 100 words. Let me start by recalling what I know about LLMs. They stand for Large Language Model, right? So they're big models trained on a lot of text data.
+
+First, I should mention that LLMs are developed using deep learning techniques. Then, their main purpose is to understand and generate human language, including writing, speaking, and even understanding complex concepts. 
+
+Wait, but I should make sure to cover key points without getting too technical. Maybe start with defining LLMs, then their capabilities, training methods, and applications. Also, check if there's anything else important to add, but keep it under 100 words. Need to ensure accuracy and clarity.
+</think>
+
+LLM stands for Large Language Model, which are advanced artificial intelligence systems designed to understand and generate human-like language. These models are trained on vast datasets of text, enabling them to comprehend complex topics, write coherent responses, and perform tasks such as answering questions or generating creative content. Their core functionality relies on deep learning algorithms, making them highly versatile in both academic and real-world applications. LLMs aim to simulate human thought processes, allowing them to process information efficiently and produce contextually relevant results.  
+
+(100 words)
+2026-02-06 17:13:08,542 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:13:08,542 INFO llm_inference_service - Processed output: LLM stands for Large Language Model, which are advanced artificial intelligence systems designed to understand and generate human-like language. These models are trained on vast datasets of text, enabling them to comprehend complex topics, write coherent responses, and perform tasks such as answering questions or generating creative content. Their core functionality relies on deep learning algorithms, making them highly versatile in both academic and real-world applications. LLMs aim to simulate human thought processes, allowing them to process information efficiently and produce contextually relevant results.  
+
+(100 words)
+2026-02-06 17:13:08,542 INFO llm_inference_service - Flask /generate completed in 18895.18 ms (prompt_len=34, max_tokens=512, temperature=0.100)
+2026-02-06 17:13:08,543 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:13:08] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:13:54,193 INFO llm_inference_service - Generation stats (prompt_tokens=69, new_tokens=335, elapsed_ms=20388.85, rss_delta_mb=96.30)
+2026-02-06 17:13:54,194 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:13:54,194 INFO llm_inference_service - Raw output: <think>
+<think>
+Okay, I need to explain what LLM is in 100 words. Let me start by recalling my knowledge. An LLM stands for Large Language Model. These models are trained on a large amount of text data, right? They're used for tasks like answering questions, generating text, etc.
+
+Wait, but I should make sure it's accurate. Are there different types of LLMs? Maybe there's a specific type called BERT? But the question just asks "LLM," so maybe they mean any LLM. Also, when explaining, I need to mention that they're based on deep learning and have various applications. 
+
+I should structure it: Start with defining LLM, then explain its purpose, training process, applications, and why it's important. Keep each part concise, around 100 words total. Avoid jargon where possible, but since it's about LLM, some technical terms might be okay. Make sure to end with a summary of key points.
+</think>
+
+A Large Language Model (LLM) is a type of artificial intelligence designed to understand and generate human-like text. These models are trained using vast datasets, often from books, articles, or other sources, allowing them to comprehend complex concepts and respond to diverse queries. LLMs can perform tasks such as answering questions, writing creative content, or even translating languages. Their core lies in deep learning techniques, enabling them to learn patterns and improve performance over time. By mimicking human thought processes, LLMs offer practical applications across fields, making them valuable tools in various industries.  
+
+(Word count: 98)
+2026-02-06 17:13:54,194 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:13:54,194 INFO llm_inference_service - Processed output: A Large Language Model (LLM) is a type of artificial intelligence designed to understand and generate human-like text. These models are trained using vast datasets, often from books, articles, or other sources, allowing them to comprehend complex concepts and respond to diverse queries. LLMs can perform tasks such as answering questions, writing creative content, or even translating languages. Their core lies in deep learning techniques, enabling them to learn patterns and improve performance over time. By mimicking human thought processes, LLMs offer practical applications across fields, making them valuable tools in various industries.  
+
+(Word count: 98)
+2026-02-06 17:13:54,194 INFO llm_inference_service - Flask /generate completed in 20389.42 ms (prompt_len=34, max_tokens=512, temperature=0.000)
+2026-02-06 17:13:54,194 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:13:54] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:15:06,093 INFO llm_inference_service - Generation stats (prompt_tokens=69, new_tokens=335, elapsed_ms=20108.81, rss_delta_mb=114.64)
+2026-02-06 17:15:06,093 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:15:06,093 INFO llm_inference_service - Raw output: <think>
+<think>
+Okay, I need to explain what LLM is in 100 words. Let me start by recalling my knowledge. An LLM stands for Large Language Model. These models are trained on a large amount of text data, right? They're used for tasks like answering questions, generating text, etc.
+
+Wait, but I should make sure it's accurate. Are there different types of LLMs? Maybe there's a specific type called BERT? But the question just asks "LLM," so maybe they mean any LLM. Also, when explaining, I need to mention that they're based on deep learning and have various applications. 
+
+I should structure it: Start with defining LLM, then explain its purpose, training process, applications, and why it's important. Keep each part concise, around 100 words total. Avoid jargon where possible, but since it's about LLM, some technical terms might be okay. Make sure to end with a summary of key points.
+</think>
+
+A Large Language Model (LLM) is a type of artificial intelligence designed to understand and generate human-like text. These models are trained using vast datasets, often from books, articles, or other sources, allowing them to comprehend complex concepts and respond to diverse queries. LLMs can perform tasks such as answering questions, writing creative content, or even translating languages. Their core lies in deep learning techniques, enabling them to learn patterns and improve performance over time. By mimicking human thought processes, LLMs offer practical applications across fields, making them valuable tools in various industries.  
+
+(Word count: 98)
+2026-02-06 17:15:06,093 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:15:06,093 INFO llm_inference_service - Processed output: A Large Language Model (LLM) is a type of artificial intelligence designed to understand and generate human-like text. These models are trained using vast datasets, often from books, articles, or other sources, allowing them to comprehend complex concepts and respond to diverse queries. LLMs can perform tasks such as answering questions, writing creative content, or even translating languages. Their core lies in deep learning techniques, enabling them to learn patterns and improve performance over time. By mimicking human thought processes, LLMs offer practical applications across fields, making them valuable tools in various industries.  
+
+(Word count: 98)
+2026-02-06 17:15:06,093 INFO llm_inference_service - Flask /generate completed in 20109.52 ms (prompt_len=34, max_tokens=512, temperature=0.000)
+2026-02-06 17:15:06,094 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:15:06] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:15:42,379 INFO llm_inference_service - Generation stats (prompt_tokens=75, new_tokens=271, elapsed_ms=16067.50, rss_delta_mb=16.00)
+2026-02-06 17:15:42,379 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:15:42,379 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants to know what LLM is and explain it in 100 words without mentioning anything about word counts. First, I need to make sure I'm answering correctly. LLM stands for Large Language Model, which is a type of artificial intelligence model developed by companies like Google, BERT, etc.
+
+I should start by defining LLM as a system that can understand and generate text. Then mention its applications, like language processing, content creation, and other uses. Need to keep each sentence concise. Avoid using any markdown, just plain text. Make sure the explanation is within 100 words. Check if there's any part about word counts, but since the user said not to, I'll stick to that. Alright, time to put it all together.
+</think>
+
+LLM (Large Language Model) is a type of artificial intelligence designed to understand and generate human-like text. It processes input, analyzes context, and produces coherent responses, making it useful for tasks like language translation, writing, and content creation. LLMs rely on deep learning algorithms to analyze patterns and produce high-quality outputs. Applications span various fields, including customer service, research, and creative industries, demonstrating LLM’s potential to enhance productivity and accuracy. This technology enables machines to perform complex tasks while maintaining natural fluency.
+2026-02-06 17:15:42,379 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:15:42,379 INFO llm_inference_service - Processed output: LLM (Large Language Model) is a type of artificial intelligence designed to understand and generate human-like text. It processes input, analyzes context, and produces coherent responses, making it useful for tasks like language translation, writing, and content creation. LLMs rely on deep learning algorithms to analyze patterns and produce high-quality outputs. Applications span various fields, including customer service, research, and creative industries, demonstrating LLM’s potential to enhance productivity and accuracy. This technology enables machines to perform complex tasks while maintaining natural fluency.
+2026-02-06 17:15:42,379 INFO llm_inference_service - Flask /generate completed in 16068.06 ms (prompt_len=59, max_tokens=512, temperature=0.000)
+2026-02-06 17:15:42,380 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:15:42] "POST /generate HTTP/1.1" 200 -
+2026-02-06 17:19:19,693 INFO llm_inference_service - Generation stats (prompt_tokens=61, new_tokens=325, elapsed_ms=19390.07, rss_delta_mb=99.99)
+2026-02-06 17:19:19,693 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:19:19,693 INFO llm_inference_service - Raw output: <think>
+Okay, the user wants to learn about Docker. Let me start by explaining what Docker is. I should mention its purpose and how it works. Then, break down the key components: images, containers, networks, etc. Make sure to explain each part clearly. Maybe add a quick example of using Docker in practice. Also, highlight some benefits like portability and resource efficiency. Keep the language simple and avoid jargon. Check if the user needs more details on specific aspects, but keep the response focused and concise. Alright, time to put that into a structured answer.
+</think>
+
+Docker is a platform that allows developers to package applications as portable executable files (distributions) which can be run on any Linux-based system. It simplifies deploying and managing software across different environments by creating isolated, self-contained instances called containers. Key features include:
+
+- **Images**: These are static files that contain everything needed to run a program, including dependencies and runtime libraries.
+- **Containers**: These are built from images and can be used to run applications without needing to install external tools or configurations.
+- **Networks**: Containers can share or isolate network connections, making it easier to manage services.
+- **Portability**: Applications can be deployed anywhere as long as they're running on the same operating system.
+
+By using Docker, developers can quickly deploy their applications, test them, and scale them efficiently. For example, you could create a new image, build a container, and run it on a server or cloud instance. This approach ensures consistency and reduces complexity. Let me know if you'd like more detailed information!
+2026-02-06 17:19:19,693 INFO llm_inference_service - ========================================================================================================================================================================================================
+2026-02-06 17:19:19,693 INFO llm_inference_service - Processed output: Docker is a platform that allows developers to package applications as portable executable files (distributions) which can be run on any Linux-based system. It simplifies deploying and managing software across different environments by creating isolated, self-contained instances called containers. Key features include:
+
+- **Images**: These are static files that contain everything needed to run a program, including dependencies and runtime libraries.
+- **Containers**: These are built from images and can be used to run applications without needing to install external tools or configurations.
+- **Networks**: Containers can share or isolate network connections, making it easier to manage services.
+- **Portability**: Applications can be deployed anywhere as long as they're running on the same operating system.
+
+By using Docker, developers can quickly deploy their applications, test them, and scale them efficiently. For example, you could create a new image, build a container, and run it on a server or cloud instance. This approach ensures consistency and reduces complexity. Let me know if you'd like more detailed information!
+2026-02-06 17:19:19,693 INFO llm_inference_service - Flask /generate completed in 19390.64 ms (prompt_len=24, max_tokens=512, temperature=0.000)
+2026-02-06 17:19:19,694 INFO werkzeug - 28.192.0.254 - - [06/Feb/2026 17:19:19] "POST /generate HTTP/1.1" 200 -
