@@ -52,14 +52,14 @@ class ModelService:
     def build_messages(self, user_prompt: str):
         return [
             {
-                "role": "system",
-                "content": (
-                    "You are an AI assistant. "
-                    "You must provide only the final answer. "
-                    "Do not include any reasoning, thinking, analysis, or internal deliberation. "
-                    "Do not use tags like <think>. "
-                    "Respond with the answer only."
-                )
+            "role": "system",
+            "content": (
+                "You are an AI assistant. "
+                "Provide only the final answer. "
+                "Do not include reasoning, analysis, thinking steps, or internal deliberation. "
+                "Do not use <think> or similar tags. "
+                "Respond with the answer only."
+            )
             },
             {
                 "role": "user",
