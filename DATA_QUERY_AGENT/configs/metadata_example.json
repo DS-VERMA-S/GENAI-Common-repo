@@ -1,0 +1,13 @@
+{
+  "dataset": "sales",
+  "columns": [
+    {"name": "order_id", "type": "string", "description": "Order identifier"},
+    {"name": "customer_id", "type": "string", "description": "Customer identifier"},
+    {"name": "order_date", "type": "date", "description": "Order date"},
+    {"name": "region", "type": "string", "description": "Sales region"},
+    {"name": "amount", "type": "double", "description": "Order amount"},
+    {"name": "status", "type": "string", "description": "Order status"}
+  ],
+  "allowed_actions": ["select", "filter", "aggregate", "group_by", "order_by", "limit"]
+}
+

@@ -1,0 +1,2 @@
+Show total amount by region for completed orders in 2024, top 10 regions by total amount.
+

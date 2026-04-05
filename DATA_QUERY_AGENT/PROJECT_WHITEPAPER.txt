@@ -1,0 +1,222 @@
+Resume Headline
+
+LLM-Driven Spark Action Planner: Intelligent Natural Language Query Translation, Validation, and S3-Backed Data Execution
+
+Executive Summary
+
+This project is an enterprise-grade proof of concept for combining large language models with Apache Spark to translate natural language intent into validated analytic workflows. It demonstrates an architecture that accepts a user question, creates a structured action plan using Azure OpenAI, validates the plan against metadata, executes the plan on Spark, and writes the result to S3 in a production-ready format. The system is designed to support secure metadata-driven operations, reduce manual ETL coding, and accelerate business agility by enabling data exploration through conversational queries.
+
+Introduction
+
+Modern data teams need to decrease the time between question and answer while preserving governance and data quality. The LLM + Spark Action Planner project provides a methodological approach to this challenge. The system treats the LLM as a planner that generates a JSON-based action plan, then applies deterministic validation and Spark execution to safely translate that plan into a real dataset transformation. This whitepaper documents the project purpose, architecture, implementation details, usage patterns, and operational considerations.
+
+Problem Statement
+
+Data analysts and business users often face several common challenges:
+
+- Natural language queries are rich in intent but ambiguous in structure.
+- Direct LLM outputs are not inherently safe or schema-aware.
+- Enterprise data operations require validation against authorized metadata, including permitted actions, available columns, and dataset boundaries.
+- Running queries on large datasets requires a scalable execution engine like Apache Spark.
+- Results must often be persisted to object storage in standardized formats such as Excel or Parquet.
+
+This project addresses these challenges by separating planning, validation, execution, and persistence into distinct steps.
+
+Solution Overview
+
+The project implements a CLI-driven pipeline around the following high-level flow:
+
+1. User submits a question and metadata.
+2. The LLM generates an action plan in a controlled JSON schema.
+3. The action plan is validated against metadata, including allowed actions and column names.
+4. Validation errors are used to re-prompt the LLM until an acceptable plan is produced or retry limits are reached.
+5. Spark executes the validated plan against the input dataset.
+6. Results are written to the target URI, typically S3.
+
+This design provides a strong guardrail around LLM output while retaining flexible, natural-language driven analytics.
+
+Architecture and Components
+
+The project is organized in a modular Python package under `src/llm_spark_pipeline`. Key modules include:
+
+- `cli.py`: Defines the Typer-based command line interface and parameter validation.
+- `pipeline.py`: Orchestrates the end-to-end workflow from question to output.
+- `llm/extractor.py`: Builds prompts and invokes Azure OpenAI to produce `ActionPlan` instances.
+- `llm/prompt_templates.py`: Encodes base and retry prompt templates for robust plan generation.
+- `validation/schema.py`: Defines the Pydantic models for the action plan schema.
+- `validation/validator.py`: Implements rule-based validation against metadata.
+- `spark/executor.py`: Reads input data, applies filters, aggregations, selection, ordering, and limits using Spark.
+- `io/output.py`: Writes results to the configured output URI.
+- `spark/session.py`: Creates a Spark session configured for local and cloud usage.
+- `config.py`: Loads settings from environment variables and configuration sources.
+- `logging.py`: Sets up structured logging for observability.
+
+This separation improves maintainability and makes it easier to adapt individual components to changing requirements.
+
+Data Flow and Workflow
+
+The pipeline’s data flow is intentional and sequential:
+
+- Input ingestion accepts a question string or question file, metadata string or metadata file, input URI, output URI, output format, and retry controls.
+- The CLI performs initial validation to ensure either a question or question file is provided, and either metadata or metadata file is provided.
+- Settings are loaded, including Azure OpenAI credentials and runtime behavior.
+- `run_pipeline` attempts to generate an `ActionPlan` via `extract_action_plan`.
+- `extract_action_plan` uses LangChain’s `PydanticOutputParser` to constrain the LLM output to the `ActionPlan` schema.
+- If validation fails, the system logs the errors and retries with an adjusted prompt containing the previous error details.
+- Once validated, `execute_plan` loads the input data and performs all specified transformations.
+- The final DataFrame is persisted to the output URI using the selected format.
+
+Action Plan Schema and Governance
+
+The action plan schema is the heart of the system. It is defined in `validation/schema.py` using Pydantic:
+
+- `dataset`: The dataset name to ensure the plan targets the correct source.
+- `select`: Optional list of selected columns.
+- `filters`: Optional list of filter conditions, each with `column`, `operator`, and `value`.
+- `aggregations`: Optional list of aggregation definitions with `column`, `function`, and optional `alias`.
+- `group_by`: Optional list of grouping columns.
+- `order_by`: Optional sort criteria with `column` and `direction`.
+- `limit`: Optional integer cap on returned rows.
+
+The schema also includes a validator for `order_by.direction` to enforce `asc` or `desc` values.
+
+Validation rules in `validator.py` then perform governance checks:
+
+- Confirm the requested dataset matches metadata.
+- Confirm requested actions such as `select`, `filter`, `aggregate`, `group_by`, `order_by`, and `limit` are allowed by metadata.
+- Confirm referenced columns exist in the metadata schema.
+- Confirm `limit` is positive.
+
+This dual-layer approach—schema validation plus metadata rule validation—reduces the risk of the LLM generating unsafe or unauthorized plans.
+
+LLM Integration and Prompting
+
+The project uses Azure OpenAI via `langchain-openai` and `langchain` for prompt orchestration. The extraction path is intentionally deterministic:
+
+- `AzureChatOpenAI` is configured with `temperature=0.0` to minimize randomness.
+- The base prompt directs the model to convert the user’s question into a JSON action plan matching the schema.
+- On validation failure, the retry prompt includes the previous errors and asks for a corrected JSON plan.
+- Output parsing uses `PydanticOutputParser` to enforce JSON syntax and schema shape.
+
+This makes the LLM responsible for planning and intent parsing while keeping execution deterministic and validated.
+
+Spark Execution Details
+
+Spark execution is implemented in `spark/executor.py` with the following capabilities:
+
+- Input reading supports Parquet, CSV, JSON, and default folder-based Parquet reads.
+- Filters handle operators including `=`, `!=`, `>`, `>=`, `<`, `<=`, `contains`, `in`, and `not_in`.
+- Aggregations support `sum`, `avg`, `min`, `max`, and `count`.
+- Group-by operations are applied when aggregations are present.
+- Column selection is applied after filtering and aggregation.
+- Ordering is applied via Spark’s `orderBy`.
+- Row limits are applied last.
+
+This sequence preserves the intended semantics of SQL-like query operations while remaining compatible with distributed Spark execution.
+
+Output Management
+
+The project is designed to write results back to cloud storage. Key aspects include:
+
+- Output URI input is handled as a destination for the final result.
+- The README notes that Excel output is capped by `EXCEL_ROW_LIMIT` to avoid collecting large datasets into memory.
+- For S3 usage with local PySpark, Hadoop AWS jars and AWS credentials are required.
+
+While the code supports both Excel and Parquet, the primary emphasis is on safe, S3-backed result persistence.
+
+Configuration and Deployment
+
+The project is configured via environment variables and optionally `.env`. The `pyproject.toml` confirms the package metadata and dependencies, including:
+
+- `langchain` and `langchain-openai` for prompt construction and model integration.
+- `pydantic` and `pydantic-settings` for strong schema and settings definitions.
+- `python-dotenv` for local configuration.
+- `typer` for CLI entry points.
+- `rich` for console output.
+- `boto3` for AWS interactions.
+- `pandas` and `openpyxl` for Excel output support.
+- `pyspark` for distributed execution.
+
+`llm-spark-pipeline` is installed as a console script entry point so the project can be invoked directly after installation.
+
+Example Usage Scenario
+
+A typical execution sequence looks like:
+
+1. User prepares `configs/question_example.txt` and `configs/metadata_example.json`.
+2. User runs:
+
+```
+python -m llm_spark_pipeline --question-file configs/question_example.txt --metadata-file configs/metadata_example.json --input-uri s3://your-bucket/input/ --output-uri s3://your-bucket/output/result.xlsx
+```
+
+3. The system invokes the LLM to create an `ActionPlan` and validates it.
+4. If validation passes, Spark runs the plan and writes the output.
+5. If validation fails, the LLM is re-prompted automatically with the error details.
+
+This workflow suits analytics teams that need curated, repeatable execution of natural-language requests.
+
+Security and Operational Considerations
+
+The project includes several important operational controls:
+
+- Azure OpenAI credentials must be present and are never embedded directly in code.
+- Metadata-driven governance restricts permitted actions and available columns.
+- Validation failures are explicitly handled with retries instead of blind execution.
+- Spark’s input reader supports only known file formats, reducing accidental execution on unsupported sources.
+- The CLI enforces required parameters and fails fast when question or metadata inputs are missing.
+
+These mechanisms are critical when applying generative AI in regulated or production environments.
+
+Strengths and Differentiators
+
+This project’s strengths include:
+
+- Clear separation of responsibilities between the planner, validator, executor, and output writer.
+- Use of a strict Pydantic action plan schema to constrain LLM output.
+- Integration with Spark for scalable, distributed analytical execution.
+- Retry logic that uses validation feedback to correct the LLM’s plan.
+- Support for both natural language input and file-based input.
+- A CLI-first interface that is easy to adopt in pipeline automation.
+
+This combination makes it far stronger than ad hoc LLM-to-SQL approaches because it maintains governance and avoids direct prompt-to-query execution without validation.
+
+Challenges and Limitations
+
+The current architecture is intentionally narrow in scope, and several limitations should be acknowledged:
+
+- The action plan schema supports a fixed set of operations and does not yet include joins, window functions, or nested transformations.
+- The system expects metadata to define `dataset`, `columns`, and `allowed_actions`, so it is only as good as the metadata quality.
+- Output persistence to Excel is useful for reports, but large output sets may require a more scalable storage-first strategy.
+- Local Spark execution may require additional configuration to work with AWS S3 connectors and credentials.
+
+A future release would benefit from a richer schema, more advanced prompt engineering, and support for additional execution backends.
+
+Future Enhancements
+
+Potential project enhancements include:
+
+- Expanding the action plan schema to support joins, window functions, and derived column expressions.
+- Adding lineage tracking and execution auditing for each generated action plan.
+- Introducing a data catalog integration so metadata can be fetched dynamically from enterprise metadata stores.
+- Supporting additional output formats such as Delta Lake, CSV, and JSON Lines.
+- Enabling a web or conversational interface in addition to the CLI.
+- Adding validation for semantics beyond schema, such as business rules and row-level security.
+
+Each of these enhancements would extend the system from a capable prototype toward a production-grade conversational analytics platform.
+
+Conclusion
+
+The LLM + Spark Action Planner project is a compelling demonstration of how natural language can be converted into validated, executable analytics workflows. It combines:
+
+- prompt-driven LLM planning,
+- strong schema and metadata validation,
+- Spark-based data transformation,
+- S3-compatible output persistence,
+- and a CLI for operational access.
+
+The architecture is suitable for teams that want to accelerate analytics while retaining governance and traceability. As a resume asset, it highlights expertise in generative AI integration, data engineering, Spark, schema validation, and cloud data orchestration.
+
+Project File
+
+This whitepaper has been saved in `PROJECT_WHITEPAPER.txt` at the repository root. It can be used as a project summary document or included in documentation deliverables.
